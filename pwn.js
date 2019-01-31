@@ -532,6 +532,7 @@ function pwn()
 	    
        var JITaddr = addrof(jit);
        alert("JITaddr:" + JITaddr);
+	    alert("done");
        
 
     }
