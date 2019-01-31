@@ -3,6 +3,7 @@
 var a = [13.37, 13.37];
 a[0] = {};
 
+
 //
 // addrof primitive
 //
